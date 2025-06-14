@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #8db8de;
+            padding: 30px;
+        }
+        form {
+            background-color: #c9c1c1;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .gender, .education {
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #66bb69;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="reset"] {
+            background-color: #cc7069;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Basic Information Form</h2>
+
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="mobile">Mobile No.:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label>Gender:</label>
+    <div class="gender">
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male" style="display:inline;">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female" style="display:inline;">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other" style="display:inline;">Other</label>
+    </div>
+
+    <label>Education Done:</label>
+    <div class="education">
+        <input type="checkbox" id="school" name="education" value="School">
+        <label for="school" style="display:inline;">School</label><br>
+
+        <input type="checkbox" id="college" name="education" value="College">
+        <label for="college" style="display:inline;">College</label><br>
+
+        <input type="checkbox" id="university" name="education" value="University">
+        <label for="university" style="display:inline;">University</label>
+    </div>
+
+    <label for="tea">Do you like tea?</label>
+    <select id="tea" name="tea" required>
+        <option value="">--Select--</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Sometimes">Sometimes</option>
+    </select>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+</body>
+</html>
